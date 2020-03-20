@@ -1,1 +1,7 @@
-<p>meal-details works!</p>
+<div class="container">
+    <mat-card style="margin-top: 20px; width: 300px">
+        <div>{{ selectedMeal?.strMeal }}</div>
+        <div>{{ selectedMeal?.strArea }}</div>
+        <img [src]="selectedMeal?.strMealThumb" width="200" />
+    </mat-card>
+</div>

@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { MealListComponent } from './components/meal-list/meal-list.component';
 import { MealDetailsComponent } from './components/meal-details/meal-details.component';
+import { MealDetailGuard } from './guards/meal-detail.guard';
 
 
 const routes: Routes = [
   {path: '', component: WelcomeComponent},
   {path: 'meals', component: MealListComponent},
-  {path: 'meal-details', component: MealDetailsComponent},
-  {path: 'meal-details/:id', component: MealDetailsComponent},
+  {path: 'meal-details', component: MealDetailsComponent, canActivate: [MealDetailGuard]},
+  {path: 'meal-details/:id', component: MealDetailsComponent, canActivate: [MealDetailGuard]},
   {path: '**', redirectTo: 'meals', pathMatch: 'full'}
 ];
 

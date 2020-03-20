@@ -1,17 +1,12 @@
 .container {
     display: flex;
     justify-content: space-evenly;
-}
-
-// .meals, .desserts {
-//     display: flex;
-//     flex-direction: column;
-// }
-
-.meals, .desserts {
-    text-align: center;
-}
-
-mat-card {
-    margin-bottom: 10px;
+    .meals, .desserts {
+        text-align: center;
+        mat-card {
+            cursor: pointer;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    }
 }
