@@ -1,0 +1,7 @@
+mat-toolbar-row > span {
+    cursor: pointer;
+
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+}

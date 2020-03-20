@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="meals">
+        <h2>Meals</h2>
+        <div *ngFor="let meal of americanMeals" [routerLink]="['/meal-details', meal.idMeal]">
+            <mat-card>
+                <div>{{ meal.strMeal }}</div>
+                <div>{{ meal.strArea }}</div>
+                <img [src]="meal.strMealThumb" width="200" />
+            </mat-card>
+        </div>
+    </div>
+    <div class="desserts">
+        <h2>Desserts</h2>
+        <div *ngFor="let dessert of desserts" (click)="goToMealDetails(dessert.idMeal)">
+            <mat-card>
+                <div>{{ dessert.strMeal }}</div>
+                <div>{{ dessert.strArea }}</div>
+                <img [src]="dessert.strMealThumb" width="200" />
+            </mat-card>
+        </div>
+    </div>
+</div>
