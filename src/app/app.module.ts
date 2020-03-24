@@ -10,6 +10,11 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { MealListComponent } from './components/meal-list/meal-list.component';
 import { MealDetailsComponent } from './components/meal-details/meal-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,12 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
